@@ -1,0 +1,21 @@
+<%- include("includes/head.ejs")  %>
+<body>
+   <h2>this page belong to @ <%= data.name %> </h2>
+   <button>Follow</button>
+   <button>Message</button>
+    
+   <p>Followers:<%= data.followers %></p>
+   <p>following:<%= data.following  %></p>
+    <hr>
+
+
+    <% for(let post of data.posts) { %>
+        <img src="<%= post.image %>" />
+        <p>Likes: <%= post.likes %></p>
+        <p>Comments: <%= post.comments %></p>  
+    <% } %>
+    
+
+    <script src="/app.js"></script>
+</body>
+</html>

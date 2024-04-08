@@ -1,0 +1,16 @@
+CURD operations
+
+GET retrieves resources.
+POST submits new data to the server
+PUT updates existing data
+PATCH is used for partial updates of a resource
+DELETE  removes an existing resource
+
+
+Creating RESTful APIs 
+
+GET /posts to get data for all post   index(main)
+POST /posts to add new post  create 
+GET /posts/:id to update one post (using id)  view
+PATCH /posts/:id to update specific post   update
+DELETE /posts/:id to delete a post  destroy or delete
