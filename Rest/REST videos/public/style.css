@@ -1,14 +1,35 @@
+ 
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
- 
- 
- display: flex;
-flex-direction: column;
-
+    padding: 1rem;
+}
+h2{
+    font-size: 2.5rem;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.indexDelete{
+    margin-top:1rem ;
+    width: fit-content;
+    padding: 0.6rem 1rem;
+    color: white;
+    background-color: violet;
+    border: none;
+    border-radius: 1rem;
+}
 .post{
-    height: 150px;
-    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 300px;
+    width: auto;
     background-color: rgb(225, 150, 150);
     border-radius: 1rem;
     padding: 0.5rem;
@@ -44,3 +65,35 @@ form{
 }
 
  
+
+/* Editing page */
+
+
+.mainEdit{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.idEdit{
+    font-size: 1.5rem;
+    
+}
+
+.usernameEdit{
+    font-size: 1.4rem;
+
+}
+
+
+.submitEdit{
+    padding: 0.5rem;
+    width: fit-content;
+    background-color: rgb(67, 58, 59);
+    color:#fff;
+    font-size: 1.3rem;
+    border-radius: 1rem;
+}
+

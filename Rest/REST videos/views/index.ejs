@@ -7,11 +7,16 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-   <h1>Coder Posts</h1> 
+   <h2>Coder Posts</h2> 
     <% for(post of posts) {%>
     <div class="post">
         <h3 class="user">@<%= post.username %></h3>
         <h4 class="content"><%= post.content %></h4>
+        <a href="http://localhost:8080/posts/<%= post.id%>">Show in Detail</a>
+        <a href="http://localhost:8080/posts/<%= post.id%>/edit">Edit</a>
+        <form method="post" action="/posts/<%=post.id%>?_method=DELETE">
+        <button class="indexDelete">Delete Post</button>
+        </form>
     </div>
     
     

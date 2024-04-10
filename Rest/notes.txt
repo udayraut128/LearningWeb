@@ -14,3 +14,10 @@ POST /posts to add new post  create
 GET /posts/:id to update one post (using id)  view
 PATCH /posts/:id to update specific post   update
 DELETE /posts/:id to delete a post  destroy or delete
+
+
+
+
+in html doc or file only get or post request is work 
+but we can override this error by  using form tag and method attribute in it.
+<form action="/example" method="post"> 
