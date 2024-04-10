@@ -6,6 +6,11 @@ PUT updates existing data
 PATCH is used for partial updates of a resource
 DELETE  removes an existing resource
 
+CURD operation
+Create por post
+Read for GET
+Update for PUT or PATCH
+Delete for  DELETE
 
 Creating RESTful APIs 
 
