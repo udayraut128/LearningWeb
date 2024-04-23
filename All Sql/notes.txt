@@ -1,0 +1,12 @@
+Our first Database
+
+we can use to create database both upper and lower case.
+CREATE DATABASE  db_name;
+ => to create database in mysql.
+
+DROP DATABASE db_name;
+=> to  delete database in mysql.
+
+USE  db_name;
+=> To select the database which you want to work  on it.
+=> 
