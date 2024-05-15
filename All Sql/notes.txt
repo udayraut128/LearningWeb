@@ -10,3 +10,18 @@ DROP DATABASE db_name;
 USE  db_name;
 => To select the database which you want to work  on it.
 => 
+
+# to run mysql in terminal 
+mysql2 -u root -p   then press enter and enter your password of database.
+
+#show all database.
+SHOW DATABASES;
+#to use database .
+USE myapp;
+
+#show table in database.
+SHOW TABLES;
+
+#for select all user form table
+SELECT * FROM user WHERE username="Arvel12";
+
