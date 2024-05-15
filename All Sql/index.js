@@ -2,6 +2,7 @@
  const app = express();
  const port = 3000;
  const path = require("path");
+ const methodOverride = require("method-override");
 
  const { faker } = require("@faker-js/faker");
  const mysql = require("mysql2");
@@ -12,7 +13,8 @@
    database: "myapp",
    password: "UdayRaut@#214125",
  });
-
+ app.use(methodOverride("_method"));
+ app.use(express.urlencoded({extended:true}));
  app.set("view engine", "ejs");
  app.set("views", __dirname + "/views");
 
@@ -119,9 +121,38 @@
  });
 
 // edit route
-app.get("/user/:id/edit", (req,res) => {
-  let {id}=req.params;
-res.render("edit.ejs");
+ app.get("/user/:id/edit", (req, res) => {
+  let {id} = req.params;
+   let q = `SELECT * FROM user WHERE id='${id}'`;
+   try {
+     connection.query(q, (err, result) => {
+       if (err) throw err;
+       let user=result[0];
+       console.log(result);
+       res.render("edit.ejs", { user });
+     });
+   } catch (err) {
+     console.log(err);
+     res.send("Some error in DataBase");
+   }
+ });
+
+
+// Update (DB) route
+app.patch("/user/:id", (req,res) => {
+  let { id } = req.params;
+  let q = `SELECT * FROM user WHERE id='${id}'`;
+  try {
+    connection.query(q, (err, result) => {
+      if (err) throw err;
+      let user = result[0];
+      console.log(result);
+      res.render("edit.ejs", { user });
+    });
+  } catch (err) {
+    console.log(err);
+    res.send("Some error in DataBase");
+  }
 });
 
 
