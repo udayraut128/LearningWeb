@@ -104,6 +104,7 @@
    }
  });
 
+//  user 
  app.get("/user", (req, res) => {
    let q = `SELECT * FROM user`;
    try {
@@ -116,6 +117,13 @@
      res.send("Some error in DataBase");
    }
  });
+
+// edit route
+app.get("/user/:id/edit", (req,res) => {
+  let {id}=req.params;
+res.render("edit.ejs");
+});
+
 
  app.listen("3000", () => {
    console.log("server is listenting to port  3000");
