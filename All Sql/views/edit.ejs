@@ -30,8 +30,8 @@
     <h1> Edit your username:<%=user.email  %></h1>
 
     <form method="post" action="/user/<%=user.id%>?_method=PATCH">
-        <textarea name="username" id=""><%= user.username %></textarea>
-        <input type="password" name="password" placeholder="enter password">
+        <textarea name="username" id="username"><%= user.username %></textarea>
+        <input type="password" name="password"  placeholder="enter password">
         <button>Edit</button>
     </form>
 </body>
