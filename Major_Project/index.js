@@ -26,16 +26,16 @@ app.get("/", (req,res) =>{
 
 
 app.get("/testListing", async (req,res) =>{
-    let sampleListing = new Listing({
-        title:"My New Villa",
-        description:"This is a beautiful villa in the heart of the city",
-        price: 100000,
-        location: "Delhi",
-        country:"India",
-    });
-    await sampleListing.save();
-    console.log(sampleListing);
-    res.send("save sucessfully");
+    // let sampleListing = new Listing({
+    //     title:"My New Villa",
+    //     description:"This is a beautiful villa in the heart of the city",
+    //     price: 100000,
+    //     location: "Delhi",
+    //     country:"India",
+    // });
+    // await sampleListing.save();
+    // console.log(sampleListing);
+    res.send("save hello sucessfully");
 });
 
 
