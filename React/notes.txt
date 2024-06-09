@@ -1,0 +1,3 @@
+jsx
+babel
+vitejs.dev
