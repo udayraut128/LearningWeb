@@ -1,3 +1,4 @@
 jsx
 babel
 vitejs.dev
+npm run dev for run code 

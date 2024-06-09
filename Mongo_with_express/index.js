@@ -13,6 +13,7 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ entended: true }));
 app.use(methodOverride("_method"));
+
 main()
   .then(() => {
     console.log("connection sucessful");
@@ -22,7 +23,7 @@ main()
   });
 
 async function main() {
-  await mongoose.connect("mongodb://127.0.0.1:27017/whatsapp");
+  await mongoose.connect("mongodb://127.0.0.1:27017/wanderlust");
 }
 
 // let chat1 = new Chat ({
