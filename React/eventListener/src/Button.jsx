@@ -1,8 +1,9 @@
 function printHello(){
     console.log("hello uday");
 }
-function bye(){
+function bye(event){
     console.log("bye");
+    console.log(event);
 }
 
 export default function Button(){
@@ -11,7 +12,7 @@ export default function Button(){
             <button onClick={printHello}>
                 Click me!
             </button>
-            
+
             <p onMouseOver={bye}>
                 lorem kldlfdfldfdlfdflfdlfjf
             </p>
